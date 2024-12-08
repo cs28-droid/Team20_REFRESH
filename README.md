@@ -148,17 +148,13 @@ Embed a demo video showcasing the glove’s features and functionality.
 <figure>
 <img src="Glove_Final.jpg" width="600">  
 
-<img src="Blynk.jpg" height="300"><img src="Hardware_Setup" height="300">
-<figcaption>AI-generated images that bring our vision of the product to life.</figcaption>
+<img src="Blynk.jpg" height="300"><img src="Hardware_Setup.jpg" height="300">
+
+<img src="GSR.jpg" height="300"><img src="Glove_First.jpg" height="300">
+
+<img src="PCB_Design.jpg" height="300"><img src="Fan.jpg" height="300">
+<!-- <figcaption>AI-generated images that bring our vision of the product to life.</figcaption> -->
 </figure>
-
-![GSR_Sensor](GSR.jpg)
-
-![First_Prototype](Glove_First.jpg)
-
-![Dual_MOSFET_PCB](PCB_Design.jpg)
-
-![Initial_Fan_Testing_Setup](Fan.jpg)
 
 ## **Team**
 
