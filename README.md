@@ -4,14 +4,12 @@
 
 ### **Revolutionizing Formula 1 Driver Safety and Performance**
 
-#### 
 R.E.F.R.E.S.H (Racing Equipment for Fluid Regulation and Enhanced Sweat Handling) is an innovative wearable glove system designed to improve the safety and efficiency of Formula 1 drivers. By integrating advanced sensor technology, real-time health monitoring, and efficient cooling mechanisms, this project addresses the unique challenges of high-performance racing.
 
 ## **About the Project**
 
 ### **Background**
 
-#### 
 Formula 1 drivers endure extreme physical and environmental stress during races, often experiencing dehydration, overheating, and cognitive fatigue. These conditions compromise their performance and safety.
 R.E.F.R.E.S.H tackles these challenges with:
 - Real-time monitoring of hydration, pulse, and SpO₂ levels.
@@ -20,8 +18,7 @@ R.E.F.R.E.S.H tackles these challenges with:
 
 ### **Our Goal**
 
-####
-Our project has the following objectives:
+#### Our project has the following objectives:
 
 - Hydration Monitoring: Provide real-time feedback on hydration levels using GSR data, processed through a machine learning model.
 - Vital Sign Tracking: Monitor heart rate and oxygen saturation with precision.
@@ -32,7 +29,6 @@ Our project has the following objectives:
 
 ### **Hardware Requirements Specification (HRS)**
 
-#### 
 The hardware requirements focus on modularity, precision, and performance. Key specifications include:
 - Microcontroller: ***ATmega328PB*** for sensor integration and control logic.
 - Sensors:
@@ -42,13 +38,11 @@ The hardware requirements focus on modularity, precision, and performance. Key s
 
 ### **HRS Results**
 
-####
 - The ATmega328PB successfully integrated with all sensors.
 - The PWM-controlled fan system was tested at different hydration states, demonstrating seamless speed adjustments.
 
 ### **Software Requirements Specification (SRS)**
 
-####
 The software design supports data acquisition, real-time processing, and machine learning integration. Key specifications include:
 - Sensor Data Acquisition:
     - ***I2C*** for pulse oximeter data.
@@ -61,13 +55,12 @@ The software design supports data acquisition, real-time processing, and machine
 
 ### **SRS Results**
 
-####
 - GSR data updated hydration levels every second.
 - The ML model achieved 98% accuracy in classifying hydration levels.
 - Data transmission via ESP32 was reliable, with all sensor data visualized on the Blynk platform in real-time.
 
 ### **Flow Diagram**
-####
+
 ![Block_Dia](Block_Diagram.png)
 
 The F1 Cooling Glove is a sophisticated system comprising a custom processing board, sensors, a cooling mechanism, and communication modules. Each component works in unison to monitor the driver’s physiological state and regulate cooling based on real-time data. Below is a detailed summary of the block diagram’s functionality:
@@ -119,14 +112,12 @@ The hydration classification guides fan speed adjustments and provides real-time
 
 ## **Testing and Challenges**
 
-####
 - **Thermal Management**: The initial MOSFET-based fan design caused overheating, resolved by transitioning to direct PWM-controlled fans.
 - **Sensor Calibration**: GSR sensor inaccuracies were addressed through extensive calibration, ensuring reliable hydration monitoring.
 - **Communication Issues**: LoRa reliability concerns were mitigated by switching to ESP32, which enhanced data consistency and integration with Blynk.
 
 ## **Results**
 
-####
 - The final glove design effectively integrated all components, achieving its objectives of physiological monitoring and cooling.
 - The fan system dynamically adjusted speeds based on hydration states, ensuring optimal performance.
 - Data transmission via ESP32 was reliable, with all sensor data visualized on the Blynk platform in real-time.
@@ -134,10 +125,10 @@ The hydration classification guides fan speed adjustments and provides real-time
 
 ## **Conclusion**
 
-####
 The REFRESH glove showcases a breakthrough in wearable technology for high-performance athletes. It combines precision monitoring, intelligent cooling, and robust communication, providing a holistic solution for Formula 1 drivers.
 
 What We Would Do Differently:
+
 - **Further Miniaturization**: Optimize hardware layout for a more compact and lightweight design.
 - **Additional Sensors**: Integrate core body temperature and stress sensors for a more comprehensive physiological profile.
 - **Advanced Data Analysis**: Implement cloud-based storage and analytics for long-term performance tracking.
@@ -154,7 +145,6 @@ Embed a demo video showcasing the glove’s features and functionality.
 
 ### **Gallery**
 
-####
 ![Final_Prototype](Glove_FInal.jpg)
 
 ![Blynk_Data](Blynk.jpg)
@@ -173,12 +163,10 @@ Embed a demo video showcasing the glove’s features and functionality.
 
 ### **Meet the Creators**
 
-####
 1. Chirag Satapathy
 2. Sanskriti Binani
 3. Megha Mistry
 
 ## **Acknowledgments**
 
-####
 We extend our gratitude to the University of Pennsylvania's ESE 5190 faculty and mentors for their guidance and support.
