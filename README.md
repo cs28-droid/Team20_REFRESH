@@ -145,11 +145,12 @@ Embed a demo video showcasing the glove’s features and functionality.
 
 ### **Gallery**
 
-![Final_Prototype](Glove_FInal.jpg)
+<figure>
+<img src="Glove_Final.jpg" width="600">  
 
-![Blynk_Data](Blynk.jpg)
-
-![Final_Hardware](Hardware_Setup.jpg)
+<img src="Blynk.jpg" height="300"><img src="Hardware_Setup" height="300">
+<figcaption>AI-generated images that bring our vision of the product to life.</figcaption>
+</figure>
 
 ![GSR_Sensor](GSR.jpg)
 
