@@ -1,5 +1,3 @@
-## **Home**
-
 ## **Welcome to R.E.F.R.E.S.H**
 
 ### **Revolutionizing Formula 1 Driver Safety and Performance**
@@ -41,6 +39,14 @@ The hardware requirements focus on modularity, precision, and performance. Key s
 - The ATmega328PB successfully integrated with all sensors.
 - The PWM-controlled fan system was tested at different hydration states, demonstrating seamless speed adjustments.
 
+| **Requirement No.** | **Test Method**                                                                                                                | **Result** |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------|------------|
+| **HRS 01**           | The project uses the ATmega328PB microcontroller as the central unit, successfully tested with basic I/O operations.             | Pass       |
+| **HRS 02**           | The GSR sensor measures skin resistance and hydration levels, with data successfully read by the ADC of the microcontroller.    | Pass       |
+| **HRS 03**           | The pulse oximeter (MAXDESREF117) measures SpO₂ and heart rate with the I2C protocol, data accurately transmitted to the MCU.    | Pass       |
+| **HRS 04**           | The cooling subsystem consists of PWM-controlled fans, adjusting speed dynamically based on GSR sensor hydration data.         | Pass       |
+
+
 ### **Software Requirements Specification (SRS)**
 
 The software design supports data acquisition, real-time processing, and machine learning integration. Key specifications include:
@@ -58,6 +64,13 @@ The software design supports data acquisition, real-time processing, and machine
 - GSR data updated hydration levels every second.
 - The ML model achieved 98% accuracy in classifying hydration levels.
 - Data transmission via ESP32 was reliable, with all sensor data visualized on the Blynk platform in real-time.
+
+| **Requirement No.** | **Test Method**                                                                                                                                               | **Result** |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| **SRS 01**           | The device successfully monitored and logged GSR values, updating hydration levels every second using predefined thresholds.                                    | Pass       |
+| **SRS 02**           | The MAXREFDES117 sensor measured SpO₂ and heart rate with a precision of ±3%, updating readings every second.                                                   | Pass       |
+| **SRS 03**           | The cooling subsystem dynamically adjusted fan speed using PWM control based on hydration thresholds from GSR sensor readings.                                  | Pass       |
+| **SRS 04**           | Machine learning algorithms, specifically Random Tree Classifier, were used to analyze GSR data and classify hydration levels, controlling the cooling system.     | Pass       |
 
 ### **Flow Diagram**
 
