@@ -2,7 +2,7 @@
 
 ### **Revolutionizing Formula 1 Driver Safety and Performance**
 
-R.E.F.R.E.S.H (Racing Equipment for Fluid Regulation and Enhanced Sweat Handling) is an innovative wearable glove system designed to improve the safety and efficiency of Formula 1 drivers. By integrating advanced sensor technology, real-time health monitoring, and efficient cooling mechanisms, this project addresses the unique challenges of high-performance racing.
+**R.E.F.R.E.S.H (Racing Equipment for Fluid Regulation and Enhanced Sweat Handling)** is an innovative wearable glove system designed to improve the safety and efficiency of Formula 1 drivers. By integrating advanced sensor technology, real-time health monitoring, and efficient cooling mechanisms, this project addresses the unique challenges of high-performance racing.
 
 ## **About the Project**
 
@@ -74,7 +74,11 @@ The software design supports data acquisition, real-time processing, and machine
 
 ### **Flow Diagram**
 
-![Block_Dia](Block_Diagram.png)
+<figure>
+<img src="Block_Diagram.png" width="500">  
+
+<figcaption>Block Diagram of the Prototype</figcaption>
+</figure>
 
 The F1 Cooling Glove is a sophisticated system comprising a custom processing board, sensors, a cooling mechanism, and communication modules. Each component works in unison to monitor the driver’s physiological state and regulate cooling based on real-time data. Below is a detailed summary of the block diagram’s functionality:
 
@@ -172,6 +176,12 @@ Embed a demo video showcasing the glove’s features and functionality.
 ## **Team**
 
 ### **Meet the Creators**
+
+<!-- <figure>
+<img src="Glove_Final.jpg" width="300">  
+
+<figcaption>The Team</figcaption>
+</figure> -->
 
 1. Chirag Satapathy
 2. Sanskriti Binani
