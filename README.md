@@ -150,7 +150,7 @@ The data from the sensors is transmitted to a remote system using LoRa modules (
 
 #### Critical Drivers:
 
-**1. ADC Driver (GSR Sensor):** {[GSR Sensor Test Code](Grove_gsrTest.X)}
+**1. ADC Driver (GSR Sensor):** 
 
 The GSR sensor measures skin resistance, which correlates with hydration levels. This sensor provides an analog voltage signal, which the microcontroller reads using its Analog-to-Digital Converter (ADC). The driver configures the ADC to read values from the GSR sensor, processes them, and calculates hydration levels.
 
@@ -182,7 +182,7 @@ uint16_t ADC_Read(uint8_t channel) {
 
 - The ADC_Read() function initiates the ADC conversion and waits for it to finish, then returns the digital value.
 
-**2. I2C (TWI) Driver (Pulse Oximeter - MAXDESREF117):** {[MAXDESREF117 Sensor Test Code](MAX30102_Pulse_Oximeter.X)}
+**2. I2C (TWI) Driver (Pulse Oximeter - MAXDESREF117):** 
 
 The I2C (Inter-Integrated Circuit) protocol is used to communicate with the MAX30102 sensor. The microcontroller acts as the master device, and the MAX30102 acts as the slave device.
 
@@ -338,7 +338,7 @@ void Set_Fan_Speed(uint8_t speed) {
 
 - The duty cycle is adjusted according to the hydration level, with a range from 0% (fan off) to 100% (fan at full speed) - Set_Fan_Speed().
 
-4. UART Driver - For all sensors to send data {[LORA Test Code with UART](LoRa_Test.X)}
+4. UART Driver - For all sensors to send data 
 
 The LoRa module (RYLR896) is used for long-range data transmission. The UART driver enables communication between the microcontroller and LoRa, sending sensor data to a remote system.
 
@@ -404,7 +404,7 @@ This system has potential applications in high-stress environments such as firef
 
 ## **Media**
 
-### **Video**
+### **Video - It's Working Yayy !!**
 
 0:00 - Disclaimer  
 0:04 - Video Starts  
@@ -442,26 +442,25 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 
 <div style="display: flex; overflow-x: auto; gap: 20px; padding: 20px; justify-content: center;">
     <!-- Creator 1: Chirag Satapathy -->
-    <div style="flex: 0 0 auto; width: 300px; text-align: center;">
-        <img src="Team.jpg" alt="Chirag Satapathy" style="max-width: 100%; height: auto;">
+    <div style="flex: 0 0 auto; width: 300px; text-align: center; overflow: hidden;">
+        <img src="Team.jpg" alt="Chirag Satapathy" style="width: 100%; height: auto; object-fit: contain;">
     </div>
     <!-- Additional Image -->
-    <div style="flex: 0 0 auto; width: 300px; text-align: center;">
-        <img src="Team3.jpg" alt="Megha Mistry" style="max-width: 100%; height: auto;">
+    <div style="flex: 0 0 auto; width: 300px; text-align: center; overflow: hidden;">
+        <img src="Team3.jpg" alt="Megha Mistry" style="width: 100%; height: auto; object-fit: contain;">
     </div>
-        <!-- Creator 2: Sanskriti Binani -->
-    <div style="flex: 0 0 auto; width: 300px; text-align: center;">
-        <img src="Team1.jpg" alt="Sanskriti Binani" style="max-width: 100%; height: auto;">
+    <!-- Creator 2: Sanskriti Binani -->
+    <div style="flex: 0 0 auto; width: 300px; text-align: center; overflow: hidden;">
+        <img src="Team1.jpg" alt="Sanskriti Binani" style="width: 100%; height: auto; object-fit: contain;">
     </div>
     <!-- Creator 3: Megha Mistry -->
-    <div style="flex: 0 0 auto; width: 300px; text-align: center;">
-        <img src="Team2.jpg" alt="Megha Mistry" style="max-width: 100%; height: auto;">
+    <div style="flex: 0 0 auto; width: 300px; text-align: center; overflow: hidden;">
+        <img src="Team2.jpg" alt="Megha Mistry" style="width: 100%; height: auto; object-fit: contain;">
     </div>
 </div>
 
-#### Creators and Their Social Links
 
-# Social Links
+### Social Links
 
 <div style="display: inline-block; justify-content: center; gap: 20px; margin-right: 100px; ">
     <div>
@@ -507,13 +506,9 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 </div>
 
 
-
-
 ## **Acknowledgments**
 
 We would like to extend our sincere gratitude to the following individuals for their guidance and support throughout the course:
-
-- **University of Pennsylvania's ESE 5190 Faculty and Mentors**: Thank you for your invaluable guidance and support throughout the course.
 
 - **Professor Nick Gardner**: We greatly appreciate your expertise, mentorship, and encouragement during the course.
 
