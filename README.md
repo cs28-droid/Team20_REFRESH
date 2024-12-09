@@ -438,13 +438,22 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 
 ### **Meet the Creators**
 
-<figure>
-<img src="Team.jpg" width="500">  <img src="Team1.jpg" width="500">  
-</figure>
+#### Gallery of Creators
+![Chirag Satapathy](Team.jpg)  
+![Sanskriti Binani](Team1.jpg)  
+![Megha Mistry](Team2.jpg)
 
-1. Chirag Satapathy
-2. Sanskriti Binani
-3. Megha Mistry
+#### Creators and Their Social Links
+
+- **Chirag Satapathy**  
+  📧 [Email](mailto:chirag@example.com) | 📸 [Instagram](https://www.instagram.com/chirag_insta) | 💼 [LinkedIn](https://www.linkedin.com/in/chirag-linkedin)
+
+- **Sanskriti Binani**  
+  📧 [Email](mailto:sanskriti@example.com) | 📸 [Instagram](https://www.instagram.com/sanskriti_insta) | 💼 [LinkedIn](https://www.linkedin.com/in/sanskriti-linkedin)
+
+- **Megha Mistry**  
+  📧 [Email](mailto:megha@example.com) | 📸 [Instagram](https://www.instagram.com/megha_insta) | 💼 [LinkedIn](https://www.linkedin.com/in/megha-linkedin)
+
 
 ## **Acknowledgments**
 
