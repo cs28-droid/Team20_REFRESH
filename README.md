@@ -44,7 +44,9 @@ The hardware requirements focus on modularity, precision, and performance. Key s
 | **HRS 01**           | The project uses the ATmega328PB microcontroller as the central unit, successfully tested with basic I/O operations.             | Pass       |
 | **HRS 02**           | The GSR sensor measures skin resistance and hydration levels, with data successfully read by the ADC of the microcontroller.    | Pass       |
 | **HRS 03**           | The pulse oximeter (MAXDESREF117) measures SpO₂ and heart rate with the I2C protocol, data accurately transmitted to the MCU.    | Pass       |
-| **HRS 04**           | The cooling subsystem consists of PWM-controlled fans, adjusting speed dynamically based on GSR sensor hydration data.         | Pass       |
+| **HRS 04**           | LoRa modules (RYLR896) enable data transmission over long distances, interfacing with the MCU via UART.                         | Blocked       |
+| **HRS 05**           | The cooling subsystem consists of PWM-controlled fans, adjusting speed dynamically based on GSR sensor hydration data.         | Pass       |
+| **HRS 06**           | If we fail to achieve LoRa transmission, we will shift the system to use ESP32 for communication, sending data to Blynk over Wi-Fi.           | Blocked       |
 
 
 ### **Software Requirements Specification (SRS)**
@@ -69,8 +71,10 @@ The software design supports data acquisition, real-time processing, and machine
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
 | **SRS 01**           | The device successfully monitored and logged GSR values, updating hydration levels every second using predefined thresholds.                                    | Pass       |
 | **SRS 02**           | The MAXREFDES117 sensor measured SpO₂ and heart rate with a precision of ±3%, updating readings every second.                                                   | Pass       |
-| **SRS 03**           | The cooling subsystem dynamically adjusted fan speed using PWM control based on hydration thresholds from GSR sensor readings.                                  | Pass       |
-| **SRS 04**           | Machine learning algorithms, specifically Random Tree Classifier, were used to analyze GSR data and classify hydration levels, controlling the cooling system.     | Pass       |
+| **SRS 03**           | The device successfully transmitted sensor data via LoRa to a remote monitoring system at intervals of 5 seconds. LoRa communication showed minimal latency.       | Blocked       |
+| **SRS 04**           | Utilizing ESP32 for backup communication and sends data to Blynk over Wi-Fi.                                           | Blocked       |
+| **SRS 05**           | The cooling subsystem dynamically adjusted fan speed using PWM control based on hydration thresholds from GSR sensor readings.                                  | Pass       |
+| **SRS 06**           | Machine learning algorithms, specifically Random Tree Classifier, were used to analyze GSR data and classify hydration levels, controlling the cooling system.     | Pass       |
 
 ### **Flow Diagram**
 
@@ -127,7 +131,7 @@ The hydration classification guides fan speed adjustments and provides real-time
 - Processed data is transmitted via ESP32 to the Blynk app and through LoRa for redundancy.
 - The Blynk app provides real-time visualization of the driver’s physiological state.
 
-## Explain your firmware implementation, including application logic and critical drivers you've written.
+## Firmware implementation, Application logic and Critical drivers
 
 #### Application Logic:
 
@@ -371,21 +375,7 @@ void UART0_transmit(unsigned char data) {
 
 - UART_Transmit() transmits a byte of data via UART to the LoRa module.
 
-The firmware includes critical drivers for ADC, I2C, PWM, and UART communication, ensuring that the GSR sensor, pulse oximeter, cooling system, and LoRa module operate seamlessly. Each driver is modular, enabling independent testing and easy integration into the overall system. The application logic processes sensor data, controls the cooling system, and handles communication for real-time monitoring.
-
-### Have you achieved some or all of your Software Requirements Specification (SRS)?
-
-The project aims to develop firmware for real-time monitoring and management of hydration and health parameters. Data is processed onboard and transmitted wirelessly for remote analysis. The cooling system is dynamically controlled based on hydration data.
-
-#### Users  
-The device is targeted at Formula 1 drivers, enabling real-time monitoring and management of hydration and physiological metrics during races.
-
-#### Definitions and Abbreviations  
-
-- ADC: Analog-to-Digital Converter  
-- I2C: Inter-Integrated Circuit  
-- SPI: Serial Peripheral Interface  
-- PWM: Pulse Width Modulation  
+The firmware includes critical drivers for ADC, I2C, PWM, and UART communication, ensuring that the GSR sensor, pulse oximeter, cooling system, and LoRa module operate seamlessly. Each driver is modular, enabling independent testing and easy integration into the overall system. The application logic processes sensor data, controls the cooling system, and handles communication for real-time monitoring.  
 
 ## **Testing and Challenges**
 
