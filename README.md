@@ -461,13 +461,53 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 
 #### Creators and Their Social Links
 
-<!-- Social Links for Chirag, Sanskriti, and Megha in the same line -->
+# Social Links
 
-<div align="center">
-
-**Chirag Satapathy** [📧](mailto:chirag@example.com) [📸](https://www.instagram.com/chirag_insta) [💼](https://www.linkedin.com/in/chirag-linkedin)  •  **Sanskriti Binani** [📧](mailto:sanskriti@example.com) [📸](https://www.instagram.com/sanskriti_insta) [💼](https://www.linkedin.com/in/sanskriti-linkedin)  •  **Megha Mistry** [📧](mailto:megha@example.com) [📸](https://www.instagram.com/megha_insta) [💼](https://www.linkedin.com/in/megha-linkedin)
-
+<div style="display: inline-block; justify-content: center; gap: 20px; margin-right: 100px; ">
+    <div>
+        <p><strong>Chirag Satapathy</strong></p>
+        <a href="mailto:chirag@example.com">
+            <img src="https://img.icons8.com/ios/50/00BFFF/email.png" alt="Email" width="30" height="30">
+        </a>
+        <a href="https://www.instagram.com/chirag_insta">
+            <img src="https://img.icons8.com/ios/50/FF1493/instagram-new.png" alt="Instagram" width="30" height="30">
+        </a>
+        <a href="https://www.linkedin.com/in/chirag-linkedin">
+            <img src="https://img.icons8.com/ios/50/0000FF/linkedin.png" alt="LinkedIn" width="30" height="30">
+        </a>
+    </div>
 </div>
+<div style="display: inline-block; gap: 20px; margin-right: 100px;">
+    <div>
+        <p><strong>Sanskriti Binani</strong></p>
+        <a href="mailto:sanskriti@example.com">
+            <img src="https://img.icons8.com/ios/50/00BFFF/email.png" alt="Email" width="30" height="30">
+        </a>
+        <a href="https://www.instagram.com/sanskriti_insta">
+            <img src="https://img.icons8.com/ios/50/FF1493/instagram-new.png" alt="Instagram" width="30" height="30">
+        </a>
+        <a href="https://www.linkedin.com/in/sanskriti-linkedin">
+            <img src="https://img.icons8.com/ios/50/0000FF/linkedin.png" alt="LinkedIn" width="30" height="30">
+        </a>
+    </div>
+</div>
+<div style="display: inline-block; gap: 20px; margin-right: 100px;">
+    <div>
+        <p><strong>Megha Mistry</strong></p>
+        <a href="mailto:sanskriti@example.com">
+            <img src="https://img.icons8.com/ios/50/00BFFF/email.png" alt="Email" width="30" height="30">
+        </a>
+        <a href="https://www.instagram.com/sanskriti_insta">
+            <img src="https://img.icons8.com/ios/50/FF1493/instagram-new.png" alt="Instagram" width="30" height="30">
+        </a>
+        <a href="https://www.linkedin.com/in/sanskriti-linkedin">
+            <img src="https://img.icons8.com/ios/50/0000FF/linkedin.png" alt="LinkedIn" width="30" height="30">
+        </a>
+    </div>
+</div>
+
+
+
 
 ## **Acknowledgments**
 
