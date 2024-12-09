@@ -1,13 +1,5 @@
 ## **Welcome to R.E.F.R.E.S.H**
 
-## Table of Contents
-- [Home](#welcome-to-refresh)
-- [About](#about-the-project)
-- [Design](#design)
-- [Software](#software-requirements-specification-srs)
-- [Results](#results)
-- [Testing](#testing-and-challenges)
-
 ### **Revolutionizing Formula 1 Driver Safety and Performance**
 
 **R.E.F.R.E.S.H (Racing Equipment for Fluid Regulation and Enhanced Sweat Handling)** is an innovative wearable glove system designed to improve the safety and efficiency of Formula 1 drivers. By integrating advanced sensor technology, real-time health monitoring, and efficient cooling mechanisms, this project addresses the unique challenges of high-performance racing.
