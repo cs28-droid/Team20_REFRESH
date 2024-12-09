@@ -387,7 +387,7 @@ The firmware includes critical drivers for ADC, I2C, PWM, and UART communication
 - The final glove design effectively integrated all components, achieving its objectives of physiological monitoring and cooling.
 - The fan system dynamically adjusted speeds based on hydration states, ensuring optimal performance.
 - Data transmission via ESP32 was reliable, with all sensor data visualized on the Blynk platform in real-time.
-- Machine learning accurately classified hydration levels, with a 98% success rate on test data.
+- Machine learning accurately classified hydration levels, with a **98%** accuracy  on test data.
 
 ## **Conclusion**
 
@@ -418,7 +418,7 @@ This system has potential applications in high-stress environments such as firef
 4:25 - Demo of POC  
 7:05 - End  
 
-<iframe src="https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=sharing" width="640" height="480" allow="autoplay"></iframe>
 
 ### **Gallery**
 
