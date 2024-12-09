@@ -438,6 +438,7 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 
 ### **Meet the Creators**
 
+<img src="Team.jpg" height="300">
 <img src="Team3.jpg" height="300">  
 <img src="Team1.jpg" height="300">
 <img src="Team2.jpg" height="300">
@@ -491,10 +492,4 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 
 ## **Acknowledgments**
 
-We would like to extend our sincere gratitude to the following individuals for their guidance and support throughout the course:
-
-- **Professor Nick Gardner**: We greatly appreciate your expertise, mentorship, and encouragement during the course.
-
-- **Account Manager Yadnik**: Thank you for your assistance and support in managing our course-related needs.
-
-- **Course TAs Vishnu and Maryam**: We are grateful for your dedication and helpfulness in ensuring a smooth and enriching learning experience.
+We would like to express our sincere gratitude to **Professor Nick Gardner** for his invaluable expertise, mentorship, and encouragement throughout the course. His guidance has been instrumental in our learning journey. Our thanks also go to Account Manager **Yadnik Belande** for his assistance and unwavering support in managing our course-related needs, ensuring everything ran smoothly. We are equally grateful to Course TAs **Vishnu** and **Maryam** for their dedication and helpfulness, which played a significant role in providing us with a smooth and enriching learning experience.
