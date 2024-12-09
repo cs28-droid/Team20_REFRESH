@@ -453,15 +453,18 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
     <div style="flex: 0 0 auto; width: 300px; text-align: center;">
         <img src="Team2.jpg" alt="Megha Mistry" width="300" height="auto">
     </div>
+    <div style="flex: 0 0 auto; width: 300px; text-align: center;">
+        <img src="Team3.jpg" alt="Megha Mistry" width="300" height="auto">
+    </div>
 </div>
 
 #### Creators and Their Social Links
 
 <!-- Chirag Satapathy's Social Links -->
-<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
     <div style="text-align: center;">
         <p><strong>Chirag Satapathy</strong></p>
-        <p>
+        <div style="display: flex; gap: 10px;">
             <a href="mailto:chirag@example.com">
                 <img src="https://img.icons8.com/ios/50/000000/email.png" alt="Email" width="30" height="30">
             </a>
@@ -471,15 +474,15 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
             <a href="https://www.linkedin.com/in/chirag-linkedin">
                 <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn" width="30" height="30">
             </a>
-        </p>
+        </div>
     </div>
 </div>
 
 <!-- Sanskriti Binani's Social Links -->
-<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
     <div style="text-align: center;">
         <p><strong>Sanskriti Binani</strong></p>
-        <p>
+        <div style="display: flex; gap: 10px;">
             <a href="mailto:sanskriti@example.com">
                 <img src="https://img.icons8.com/ios/50/000000/email.png" alt="Email" width="30" height="30">
             </a>
@@ -489,15 +492,15 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
             <a href="https://www.linkedin.com/in/sanskriti-linkedin">
                 <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn" width="30" height="30">
             </a>
-        </p>
+        </div>
     </div>
 </div>
 
 <!-- Megha Mistry's Social Links -->
-<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
     <div style="text-align: center;">
         <p><strong>Megha Mistry</strong></p>
-        <p>
+        <div style="display: flex; gap: 10px;">
             <a href="mailto:megha@example.com">
                 <img src="https://img.icons8.com/ios/50/000000/email.png" alt="Email" width="30" height="30">
             </a>
@@ -507,7 +510,7 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
             <a href="https://www.linkedin.com/in/megha-linkedin">
                 <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn" width="30" height="30">
             </a>
-        </p>
+        </div>
     </div>
 </div>
 
