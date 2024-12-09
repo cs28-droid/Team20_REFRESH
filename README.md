@@ -418,7 +418,7 @@ This system has potential applications in high-stress environments such as firef
 4:25 - Demo of POC  
 7:05 - End  
 
-<iframe src="https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=sharing" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://youtu.be/ZUF7TIl2jmc" width="640" height="480" allow="autoplay"></iframe>
 
 ### **Gallery**
 
