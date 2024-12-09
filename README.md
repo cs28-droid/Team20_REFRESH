@@ -447,7 +447,7 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 ### **Meet the Creators**
 
 <figure>
-<img src="Team.jpg" width="500">  
+<img src="Team.jpg" width="500">  <img src="Team1.jpg" width="500">  
 </figure>
 
 1. Chirag Satapathy
