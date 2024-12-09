@@ -78,11 +78,10 @@ The software design supports data acquisition, real-time processing, and machine
 
 ### **Flow Diagram**
 
-<figure>
-<img src="Block_Diagram.png" width="500">  
-
-<figcaption>Fig1: Block Diagram of the Prototype</figcaption>
-</figure>
+<div align="center">
+  <img src="Block_Diagram.png" width="500">
+  <p><i>Fig1: Block Diagram of the Prototype</i></p>
+</div>
 
 The F1 Cooling Glove is a sophisticated system comprising a custom processing board, sensors, a cooling mechanism, and communication modules. Each component works in unison to monitor the driver’s physiological state and regulate cooling based on real-time data. Below is a detailed summary of the block diagram’s functionality:
 
@@ -439,11 +438,9 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 
 ### **Meet the Creators**
 
-<!-- <figure>
-<img src="Glove_Final.jpg" width="300">  
-
-<figcaption>The Team</figcaption>
-</figure> -->
+<figure>
+<img src="Team.jpg" width="500">  
+</figure>
 
 1. Chirag Satapathy
 2. Sanskriti Binani
