@@ -440,81 +440,43 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 
 #### Gallery of Creators
 
-<div style="display: flex; overflow-x: scroll; gap: 20px; padding: 20px; justify-content: center;">
+<div style="display: flex; overflow-x: auto; gap: 20px; padding: 20px; justify-content: center;">
     <!-- Creator 1: Chirag Satapathy -->
     <div style="flex: 0 0 auto; width: 300px; text-align: center;">
-        <img src="Team.jpg" alt="Chirag Satapathy" width="300" height="auto">
+        <img src="Team.jpg" alt="Chirag Satapathy" style="max-width: 100%; height: auto;">
     </div>
-    <!-- Creator 2: Sanskriti Binani -->
+    <!-- Additional Image -->
     <div style="flex: 0 0 auto; width: 300px; text-align: center;">
-        <img src="Team1.jpg" alt="Sanskriti Binani" width="300" height="auto">
+        <img src="Team3.jpg" alt="Megha Mistry" style="max-width: 100%; height: auto;">
+    </div>
+        <!-- Creator 2: Sanskriti Binani -->
+    <div style="flex: 0 0 auto; width: 300px; text-align: center;">
+        <img src="Team1.jpg" alt="Sanskriti Binani" style="max-width: 100%; height: auto;">
     </div>
     <!-- Creator 3: Megha Mistry -->
     <div style="flex: 0 0 auto; width: 300px; text-align: center;">
-        <img src="Team2.jpg" alt="Megha Mistry" width="300" height="auto">
-    </div>
-    <div style="flex: 0 0 auto; width: 300px; text-align: center;">
-        <img src="Team3.jpg" alt="Megha Mistry" width="300" height="auto">
+        <img src="Team2.jpg" alt="Megha Mistry" style="max-width: 100%; height: auto;">
     </div>
 </div>
 
 #### Creators and Their Social Links
 
-<!-- Chirag Satapathy's Social Links -->
-<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
-    <div style="text-align: center;">
-        <p><strong>Chirag Satapathy</strong></p>
-        <div style="display: flex; gap: 10px;">
-            <a href="mailto:chirag@example.com">
-                <img src="https://img.icons8.com/ios/50/000000/email.png" alt="Email" width="30" height="30">
-            </a>
-            <a href="https://www.instagram.com/chirag_insta">
-                <img src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="Instagram" width="30" height="30">
-            </a>
-            <a href="https://www.linkedin.com/in/chirag-linkedin">
-                <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn" width="30" height="30">
-            </a>
-        </div>
-    </div>
-</div>
+<!-- Social Links for Chirag, Sanskriti, and Megha in the same line -->
 
-<!-- Sanskriti Binani's Social Links -->
-<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
-    <div style="text-align: center;">
-        <p><strong>Sanskriti Binani</strong></p>
-        <div style="display: flex; gap: 10px;">
-            <a href="mailto:sanskriti@example.com">
-                <img src="https://img.icons8.com/ios/50/000000/email.png" alt="Email" width="30" height="30">
-            </a>
-            <a href="https://www.instagram.com/sanskriti_insta">
-                <img src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="Instagram" width="30" height="30">
-            </a>
-            <a href="https://www.linkedin.com/in/sanskriti-linkedin">
-                <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn" width="30" height="30">
-            </a>
-        </div>
-    </div>
-</div>
+<div align="center">
 
-<!-- Megha Mistry's Social Links -->
-<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
-    <div style="text-align: center;">
-        <p><strong>Megha Mistry</strong></p>
-        <div style="display: flex; gap: 10px;">
-            <a href="mailto:megha@example.com">
-                <img src="https://img.icons8.com/ios/50/000000/email.png" alt="Email" width="30" height="30">
-            </a>
-            <a href="https://www.instagram.com/megha_insta">
-                <img src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="Instagram" width="30" height="30">
-            </a>
-            <a href="https://www.linkedin.com/in/megha-linkedin">
-                <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn" width="30" height="30">
-            </a>
-        </div>
-    </div>
-</div>
+**Chirag Satapathy** [📧](mailto:chirag@example.com) [📸](https://www.instagram.com/chirag_insta) [💼](https://www.linkedin.com/in/chirag-linkedin)  •  **Sanskriti Binani** [📧](mailto:sanskriti@example.com) [📸](https://www.instagram.com/sanskriti_insta) [💼](https://www.linkedin.com/in/sanskriti-linkedin)  •  **Megha Mistry** [📧](mailto:megha@example.com) [📸](https://www.instagram.com/megha_insta) [💼](https://www.linkedin.com/in/megha-linkedin)
 
+</div>
 
 ## **Acknowledgments**
 
-We extend our gratitude to the University of Pennsylvania's ESE 5190 faculty and mentors for their guidance and support.
+We would like to extend our sincere gratitude to the following individuals for their guidance and support throughout the course:
+
+- **University of Pennsylvania's ESE 5190 Faculty and Mentors**: Thank you for your invaluable guidance and support throughout the course.
+
+- **Professor Nick Gardner**: We greatly appreciate your expertise, mentorship, and encouragement during the course.
+
+- **Account Manager Yadnik**: Thank you for your assistance and support in managing our course-related needs.
+
+- **Course TAs Vishnu and Maryam**: We are grateful for your dedication and helpfulness in ensuring a smooth and enriching learning experience.
