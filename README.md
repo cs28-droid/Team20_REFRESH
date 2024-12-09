@@ -424,13 +424,13 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 ### **Gallery**
 
 <figure>
-<img src="Glove_Final.jpg" width="300">  
-
-<img src="Blynk.jpg" height="300"><img src="Hardware_Setup.jpg" height="300">
-
-<img src="GSR.jpg" height="300"><img src="Glove_First.jpg" height="300">
-
-<img src="PCB_Design.jpg" height="300"><img src="Fan.jpg" height="300">
+<img src="Glove_Final.jpg" height="300">  
+<img src="Blynk.jpg" height="300">
+<img src="Hardware_Setup.jpg" height="300">
+<img src="GSR.jpg" height="300">
+<img src="Glove_First.jpg" height="300">
+<img src="PCB_Design.jpg" height="300">
+<img src="Fan.jpg" height="300">
 <!-- <figcaption>AI-generated images that bring our vision of the product to life.</figcaption> -->
 </figure>
 
