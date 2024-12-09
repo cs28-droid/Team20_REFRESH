@@ -398,7 +398,7 @@ What We Would Do Differently:
 - **Further Miniaturization**: Optimize hardware layout for a more compact and lightweight design.
 - **Additional Sensors**: Integrate core body temperature and stress sensors for a more comprehensive physiological profile.
 - **Advanced Data Analysis**: Implement cloud-based storage and analytics for long-term performance tracking.
-- **Enhanced Communication**: Use BLE or 5G to improve scalability and reduce latency.
+- **Enhanced Communication**: Use WiFi Max or 5G to improve scalability and reduce latency.
 
 This system has potential applications in high-stress environments such as firefighting, military operations, and industrial safety, marking a significant step forward in wearable technology.
 
@@ -439,6 +439,7 @@ This system has potential applications in high-stress environments such as firef
 
 <img src="Team.jpg" height="300">
 <img src="Team3.jpg" height="300">  
+<img src="Team4.jpg" height="300">  
 <img src="Team1.jpg" height="300">
 <img src="Team2.jpg" height="300">
 
@@ -448,13 +449,13 @@ This system has potential applications in high-stress environments such as firef
 <div style="display: inline-block; justify-content: center; gap: 20px; margin-right: 100px; ">
     <div>
         <p><strong>Chirag Satapathy</strong></p>
-        <a href="mailto:chirag@example.com">
+        <a href="mailto:csat28@seas.upenn.edu">
             <img src="https://img.icons8.com/ios/50/00BFFF/email.png" alt="Email" width="30" height="30">
         </a>
-        <a href="https://www.instagram.com/chirag_insta">
+        <a href="https://www.instagram.com/chirag_emc/?hl=en ">
             <img src="https://img.icons8.com/ios/50/FF1493/instagram-new.png" alt="Instagram" width="30" height="30">
         </a>
-        <a href="https://www.linkedin.com/in/chirag-linkedin">
+        <a href="https://www.linkedin.com/in/chirag-satapathy">
             <img src="https://img.icons8.com/ios/50/0000FF/linkedin.png" alt="LinkedIn" width="30" height="30">
         </a>
     </div>
@@ -462,13 +463,13 @@ This system has potential applications in high-stress environments such as firef
 <div style="display: inline-block; gap: 20px; margin-right: 100px;">
     <div>
         <p><strong>Sanskriti Binani</strong></p>
-        <a href="mailto:sanskriti@example.com">
+        <a href="mailto:sbinani@seas.upenn.edu">
             <img src="https://img.icons8.com/ios/50/00BFFF/email.png" alt="Email" width="30" height="30">
         </a>
-        <a href="https://www.instagram.com/sanskriti_insta">
+        <a href="https://www.instagram.com/sanskriti_binani/?hl=en">
             <img src="https://img.icons8.com/ios/50/FF1493/instagram-new.png" alt="Instagram" width="30" height="30">
         </a>
-        <a href="https://www.linkedin.com/in/sanskriti-linkedin">
+        <a href="https://www.linkedin.com/in/sanskriti-binani">
             <img src="https://img.icons8.com/ios/50/0000FF/linkedin.png" alt="LinkedIn" width="30" height="30">
         </a>
     </div>
@@ -476,13 +477,10 @@ This system has potential applications in high-stress environments such as firef
 <div style="display: inline-block; gap: 20px; margin-right: 100px;">
     <div>
         <p><strong>Megha Mistry</strong></p>
-        <a href="mailto:sanskriti@example.com">
+        <a href="mailto:megham@seas.upenn.edu">
             <img src="https://img.icons8.com/ios/50/00BFFF/email.png" alt="Email" width="30" height="30">
         </a>
-        <a href="https://www.instagram.com/sanskriti_insta">
-            <img src="https://img.icons8.com/ios/50/FF1493/instagram-new.png" alt="Instagram" width="30" height="30">
-        </a>
-        <a href="https://www.linkedin.com/in/sanskriti-linkedin">
+        <a href="http://www.linkedin.com/in/megha-mistry-31mkm">
             <img src="https://img.icons8.com/ios/50/0000FF/linkedin.png" alt="LinkedIn" width="30" height="30">
         </a>
     </div>
