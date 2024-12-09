@@ -127,6 +127,266 @@ The hydration classification guides fan speed adjustments and provides real-time
 - Processed data is transmitted via ESP32 to the Blynk app and through LoRa for redundancy.
 - The Blynk app provides real-time visualization of the driver’s physiological state.
 
+## Explain your firmware implementation, including application logic and critical drivers you've written.
+
+#### Application Logic:
+
+**1. Sensor Data Acquisition:**
+
+- The GSR Sensor measures skin resistance to monitor hydration levels. The raw data is read via the ADC of the ATmega328PB microcontroller, and the average resistance is calculated over multiple readings to smooth out fluctuations.
+
+- The MAX30102 pulse oximeter measures SpO₂ and heart rate. The sensor communicates with the microcontroller via I2C, and the data is processed to provide real-time health metrics.
+
+**2. Cooling System Control:**
+
+The cooling system consists of PWM-controlled fans. The fan speed is dynamically adjusted based on the GSR data. If the skin resistance is low (indicating high sweat levels), the fan speed increases, providing cooling. The fan speed is controlled by varying the PWM duty cycle, which is managed by the microcontroller's Timer1 module.
+
+**3. Data Transmission:**
+
+The data from the sensors is transmitted to a remote system using LoRa modules (RYLR896). We also are implementing the ESP32 as a backup to send data to the Blynk platform over Wi-Fi. The system attempts to send data every 5 seconds.
+
+#### Critical Drivers:
+
+**1. ADC Driver (GSR Sensor):** {[GSR Sensor Test Code](Grove_gsrTest.X)}
+
+The GSR sensor measures skin resistance, which correlates with hydration levels. This sensor provides an analog voltage signal, which the microcontroller reads using its Analog-to-Digital Converter (ADC). The driver configures the ADC to read values from the GSR sensor, processes them, and calculates hydration levels.
+
+- The ADC needs to be initialized before any readings are taken. The ADC is set to use AVcc as the reference voltage and the prescaler is configured to ensure that the ADC clock is within the required frequency range.
+
+- The ADC_Read() function selects the appropriate ADC channel, starts the conversion, and waits for the result. Once the conversion is complete, it returns the ADC value.
+
+```c
+// ADC initialization and read function
+void ADC_Init() {
+    ADMUX = (1<<REFS0);  // Set Vref=AVcc (assuming 5V reference voltage)
+    ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0); // Enable ADC and set prescaler to 128
+}
+
+// Function to read ADC value from a given channel
+uint16_t ADC_Read(uint8_t channel) {
+    ADMUX = (ADMUX & 0xF0) | (channel & 0x0F);  // Select ADC channel (bits 0-3)
+    ADCSRA |= (1<<ADSC);  // Start conversion
+    while (ADCSRA & (1<<ADSC));  // Wait for conversion to complete
+    return ADC;  // Return the ADC result
+}
+```
+
+**Explanation:**
+
+- ADMUX: The ADMUX register selects the reference voltage and the input channel for the ADC. The GSR sensor is connected to one of the ADC input pins.
+
+- ADCSRA: This register controls the ADC’s operation, enabling it and setting the prescaler.
+
+- The ADC_Read() function initiates the ADC conversion and waits for it to finish, then returns the digital value.
+
+**2. I2C (TWI) Driver (Pulse Oximeter - MAXDESREF117):** {[MAXDESREF117 Sensor Test Code](MAX30102_Pulse_Oximeter.X)}
+
+The I2C (Inter-Integrated Circuit) protocol is used to communicate with the MAX30102 sensor. The microcontroller acts as the master device, and the MAX30102 acts as the slave device.
+
+- The TWI_init() function configures the TWI (Two-Wire Interface) hardware module of the ATmega328PB microcontroller to communicate with other I2C devices. The SCL clock frequency is set to 100 kHz, and the prescaler is set to 1.
+
+```c
+void TWI_init(void) {
+    TWSR0 = 0x00; // Prescaler = 1
+    TWBR0 = ((F_CPU / SCL_CLOCK) - 16) / 2; // Set SCL frequency
+    TWCR0 = (1 << TWEN); // Enable TWI
+}
+```
+
+**Explanation:**
+
+- TWSR0: TWI status register for prescaler configuration.
+- TWBR0: TWI bit rate register, used to set the clock frequency.
+- TWCR0: TWI control register, enabling TWI functionality.
+
+The TWI_start() function sends the START condition on the I2C bus. The START condition signals the beginning of communication.
+
+```c
+uint8_t TWI_start(void) {
+    TWCR0 = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN); // Send START
+    while (!(TWCR0 & (1 << TWINT)));                  // Wait for completion
+    if (((TWSR0 & 0xF8) != TW_START) && ((TWSR0 & 0xF8) != TW_REP_START)) return 1;    // Check status
+    return 0;
+}
+```
+**Explanation:**
+
+- TWSTA: Initiates the start condition.
+- TWINT: Indicates if the TWI operation is complete.
+- TWSR0: TWI status register to check the status of the communication.
+
+The TWI_stop() function sends the STOP condition, marking the end of communication.
+
+```c
+void TWI_stop(void) {
+    TWCR0 = (1 << TWINT) | (1 << TWSTO) | (1 << TWEN); // Send STOP
+    while (TWCR0 & (1 << TWSTO));                     // Wait for completion
+}
+```
+**Explanation:**
+
+- TWSTO: Initiates the stop condition, signaling the end of the communication.
+
+The TWI_write() function writes a byte of data to the slave device (MAX30102).
+
+```c
+uint8_t TWI_write(uint8_t data) {
+    TWDR0 = data; // Load data
+    TWCR0 = (1 << TWINT) | (1 << TWEN); // Start transmission
+    while (!(TWCR0 & (1 << TWINT)));    // Wait for completion
+    if ((TWSR0 & 0xF8) != TW_MT_DATA_ACK && (TWSR0 & 0xF8) != TW_MT_SLA_ACK && (TWSR0 & 0xF8) != TW_MR_SLA_ACK)
+        return 1; // Check for ACK
+    return 0;
+}
+```
+
+**Explanation:**
+
+- TWDR0: TWI data register used to load the byte to be transmitted.
+
+- TWSR0: Status register to verify that the data was transmitted successfully.
+
+The TWI_read_ack() function reads a byte of data from the slave device (MAX30102) and sends an ACK (Acknowledgment) to continue reading, while TWI_read_nack() reads data and sends a NACK (No Acknowledgment) to indicate the end of the read operation.
+
+```c
+uint8_t TWI_read_ack(void) {
+    TWCR0 = (1 << TWINT) | (1 << TWEN) | (1 << TWEA); // Enable ACK
+    while (!(TWCR0 & (1 << TWINT)));                 // Wait for completion
+    return TWDR0;
+}
+
+uint8_t TWI_read_nack(void) {
+    TWCR0 = (1 << TWINT) | (1 << TWEN); // Disable ACK
+    while (!(TWCR0 & (1 << TWINT)));   // Wait for completion
+    return TWDR0;
+}
+```
+**Explanation:**
+
+- TWEA: Enables the acknowledgment signal after each byte is received.
+
+- TWDR0: Reads the data received from the slave.
+
+The readFIFOData() function reads data from the FIFO_DATA register of the MAXDESREF117, which stores the raw Red and IR sensor values. The function reads six bytes of data (three for Red and three for IR) and combines them into 32-bit values.
+
+```c
+max30102_data_t readFIFOData(void) {
+    max30102_data_t data = {0, 0};
+    uint8_t temp[6]; // Temporary buffer for 6 bytes (3 bytes each for RED and IR)
+    
+    // Start reading from FIFO_DATA register
+    TWI_start();
+    TWI_write(MAX30102_WRITE_ADDR);
+    TWI_write(0x07);  // FIFO_DATA register
+    
+    // Restart for reading
+    TWI_start();
+    TWI_write(MAX30102_READ_ADDR);
+    
+    // Read all 6 bytes
+    temp[0] = TWI_read_ack(); // RED[23:16]
+    temp[1] = TWI_read_ack(); // RED[15:8]
+    temp[2] = TWI_read_ack(); // RED[7:0]
+    temp[3] = TWI_read_ack(); // IR[23:16]
+    temp[4] = TWI_read_ack(); // IR[15:8]
+    temp[5] = TWI_read_nack(); // IR[7:0]
+    
+    TWI_stop();
+    
+    // Combine bytes into 32-bit values
+    data.red = ((uint32_t)temp[0] << 16) | ((uint32_t)temp[1] << 8) | temp[2];
+    data.ir = ((uint32_t)temp[3] << 16) | ((uint32_t)temp[4] << 8) | temp[5];
+    
+    return data;
+}
+```
+
+**Explanation:**
+
+- Reads 6 bytes of data from the FIFO register (3 bytes for the Red LED and 3 bytes for the IR LED).
+
+- The data is then combined to form 32-bit values representing the Red and IR readings.
+
+**3. PWM Driver (Cooling System)**
+
+The cooling system uses PWM-controlled fans, and the fan speed is dynamically adjusted based on hydration data derived from the GSR sensor. The Timer1 is used to generate the PWM signal, and the duty cycle is adjusted based on the hydration level.
+
+- The PWM_Init() function sets up Timer1 for Fast PWM mode.
+
+- The Set_Fan_Speed() function adjusts the PWM duty cycle to control the fan speed based on the hydration level.
+
+```c
+// PWM initialization and control for fan speed
+void PWM_Init() {
+    DDRB |= (1 << PB1);  // Set PB1 (OC1A) as output for PWM signal
+    TCCR1A |= (1 << WGM11); // Set Fast PWM mode
+    TCCR1B |= (1 << WGM13) | (1 << WGM12);  // Fast PWM mode with ICR1 as top value
+    TCCR1A |= (1 << COM1A1); // Non-inverting PWM on OC1A
+    ICR1 = 639;  // Set the PWM frequency to approximately 1kHz
+}
+
+void Set_Fan_Speed(uint8_t speed) {
+    OCR1A = (ICR1 + 1) * speed / 100 - 1;  // Set the PWM duty cycle based on the speed percentage
+}
+```
+**Explanation:**
+
+- PWM_Init() configures Timer1 to generate a PWM signal on pin PB1 (OC1A). The fan will respond to changes in the PWM duty cycle.
+
+- The duty cycle is adjusted according to the hydration level, with a range from 0% (fan off) to 100% (fan at full speed) - Set_Fan_Speed().
+
+4. UART Driver - For all sensors to send data {[LORA Test Code with UART](LoRa_Test.X)}
+
+The LoRa module (RYLR896) is used for long-range data transmission. The UART driver enables communication between the microcontroller and LoRa, sending sensor data to a remote system.
+
+- The UART_Init() function configures the UART communication with the LoRa module.
+
+- The UART_Transmit() function sends a byte of data via UART.
+
+```c
+// UART initialization and LoRa communication
+void UART0_init(unsigned int ubrr) {
+    // Set baud rate
+    UBRR0H = (unsigned char)(ubrr>>8);
+    UBRR0L = (unsigned char)ubrr;
+    
+    // Enable transmitter and receiver
+    UCSR0B = (1<<TXEN0) | (1<<RXEN0);
+    
+    // Set frame format: 8data, 1stop bit
+    UCSR0C = (1<<USBS0)|(3<<UCSZ00);
+}
+
+void UART0_transmit(unsigned char data) {
+    // Wait for empty transmit buffer
+    while (!(UCSR0A & (1<<UDRE0)));
+    
+    // Put data into buffer, sends the data
+    UDR0 = data;
+}
+```
+**Explanation:**
+
+- UART_Init() initializes the UART communication for the LoRa module, ensuring data can be transmitted at the specified baud rate.
+
+- UART_Transmit() transmits a byte of data via UART to the LoRa module.
+
+The firmware includes critical drivers for ADC, I2C, PWM, and UART communication, ensuring that the GSR sensor, pulse oximeter, cooling system, and LoRa module operate seamlessly. Each driver is modular, enabling independent testing and easy integration into the overall system. The application logic processes sensor data, controls the cooling system, and handles communication for real-time monitoring.
+
+### Have you achieved some or all of your Software Requirements Specification (SRS)?
+
+The project aims to develop firmware for real-time monitoring and management of hydration and health parameters. Data is processed onboard and transmitted wirelessly for remote analysis. The cooling system is dynamically controlled based on hydration data.
+
+#### Users  
+The device is targeted at Formula 1 drivers, enabling real-time monitoring and management of hydration and physiological metrics during races.
+
+#### Definitions and Abbreviations  
+
+- ADC: Analog-to-Digital Converter  
+- I2C: Inter-Integrated Circuit  
+- SPI: Serial Peripheral Interface  
+- PWM: Pulse Width Modulation  
+
 ## **Testing and Challenges**
 
 - **Thermal Management**: The initial MOSFET-based fan design caused overheating, resolved by transitioning to direct PWM-controlled fans.
@@ -175,7 +435,7 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 ### **Gallery**
 
 <figure>
-<img src="Glove_Final.jpg" width="600">  
+<img src="Glove_Final.jpg" width="300">  
 
 <img src="Blynk.jpg" height="300"><img src="Hardware_Setup.jpg" height="300">
 
