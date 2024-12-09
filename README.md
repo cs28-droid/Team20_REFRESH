@@ -72,7 +72,7 @@ The software design supports data acquisition, real-time processing, and machine
 | **SRS 01**           | The device successfully monitored and logged GSR values, updating hydration levels every second using predefined thresholds.                                    | Pass       |
 | **SRS 02**           | The MAXREFDES117 sensor measured SpO₂ and heart rate with a precision of ±3%, updating readings every second.                                                   | Pass       |
 | **SRS 03**           | The device successfully transmitted sensor data via LoRa to a remote monitoring system at intervals of 5 seconds. LoRa communication showed minimal latency.       | Blocked       |
-| **SRS 04**           | Utilizing ESP32 for backup communication and sends data to Blynk over Wi-Fi.                                           | Blocked       |
+| **SRS 04**           | Utilizing ESP32 for backup communication and sends data to Blynk over Wi-Fi.                                           | Pass       |
 | **SRS 05**           | The cooling subsystem dynamically adjusted fan speed using PWM control based on hydration thresholds from GSR sensor readings.                                  | Pass       |
 | **SRS 06**           | Machine learning algorithms, specifically Random Tree Classifier, were used to analyze GSR data and classify hydration levels, controlling the cooling system.     | Pass       |
 
