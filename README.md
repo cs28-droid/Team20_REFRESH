@@ -427,10 +427,10 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 <img src="Glove_Final.jpg" height="300">  
 <img src="Blynk.jpg" height="300">
 <img src="Hardware_Setup.jpg" height="300">
-<img src="GSR.jpg" height="300">
 <img src="Glove_First.jpg" height="300">
 <img src="PCB_Design.jpg" height="300">
 <img src="Fan.jpg" height="300">
+<img src="GSR.jpg" height="300">
 <!-- <figcaption>AI-generated images that bring our vision of the product to life.</figcaption> -->
 </figure>
 
@@ -438,26 +438,9 @@ https://drive.google.com/file/d/1yyJiIGj5Hjy0Eqms6tbZzeYxR1msZSwT/view?usp=shari
 
 ### **Meet the Creators**
 
-#### Gallery of Creators
-
-<div style="display: flex; overflow-x: auto; gap: 20px; padding: 20px; justify-content: center;">
-    <!-- Creator 1: Chirag Satapathy -->
-    <div style="flex: 0 0 auto; width: 300px; text-align: center; overflow: hidden;">
-        <img src="Team.jpg" alt="Chirag Satapathy" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <!-- Additional Image -->
-    <div style="flex: 0 0 auto; width: 300px; text-align: center; overflow: hidden;">
-        <img src="Team3.jpg" alt="Megha Mistry" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <!-- Creator 2: Sanskriti Binani -->
-    <div style="flex: 0 0 auto; width: 300px; text-align: center; overflow: hidden;">
-        <img src="Team1.jpg" alt="Sanskriti Binani" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <!-- Creator 3: Megha Mistry -->
-    <div style="flex: 0 0 auto; width: 300px; text-align: center; overflow: hidden;">
-        <img src="Team2.jpg" alt="Megha Mistry" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-</div>
+<img src="Team3.jpg" height="300">  
+<img src="Team1.jpg" height="300">
+<img src="Team2.jpg" height="300">
 
 
 ### Social Links
